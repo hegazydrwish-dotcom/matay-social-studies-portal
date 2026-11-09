@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مديرية التربية والتعليم بالمنيا | إدارة مطاي التعليمية | توجيه الدراسات الاجتماعية</title>
+<style>
+:root{--navy:#102a49;--navy2:#173b60;--gold:#c9a45c;--paper:#f4f6f9;--ink:#172536;--muted:#667789;--line:#e3e8ee;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+header{background:linear-gradient(120deg,#0d233d,#1b456c);color:#fff;padding:24px max(5vw,20px) 34px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:15px;max-width:1180px;margin:auto}
+.brand{display:flex;align-items:center;gap:13px}.seal{width:48px;height:48px;border:2px solid var(--gold);border-radius:15px;display:grid;place-items:center;color:#f1d99e;font-size:25px}
+.brand small{display:block;color:#d7e2ed}.brand strong{font-size:18px}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav button{border:1px solid #ffffff35;background:#ffffff12;color:#fff;padding:9px 13px;border-radius:10px;cursor:pointer}
+.hero{max-width:1180px;margin:32px auto 0;display:grid;grid-template-columns:1.5fr 1fr;gap:25px;align-items:center}
+.hero h1{font-size:clamp(27px,4vw,42px);line-height:1.35;margin:8px 0;color:#f4dfb2}.hero p{color:#e1e9f1;max-width:680px}
+.pill{display:inline-block;border:1px solid #d9bd7c;color:#f4dfb2;border-radius:30px;padding:4px 12px;font-size:13px}
+.hero-card{background:#ffffff12;border:1px solid #ffffff25;border-radius:18px;padding:20px}.hero-card b{font-size:28px;color:#f4dfb2;display:block}
+main{max-width:1180px;margin:25px auto;padding:0 18px 50px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 14px}.section-title h2{margin:0;font-size:22px}.section-title p{margin:0;color:var(--muted);font-size:13px}
+.stats,.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat,.card,.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 4px 16px #1c35500a}
+.stat span{color:var(--muted);font-size:13px}.stat strong{display:block;font-size:27px;color:var(--navy);margin-top:5px}
+.cards{grid-template-columns:repeat(3,1fr)}.card .ico{font-size:25px}.card h3{margin:7px 0 3px}.card p{color:var(--muted);font-size:13px;margin:0 0 13px}
+.btn{border:0;background:var(--navy);color:#fff;border-radius:10px;padding:10px 15px;cursor:pointer;font-weight:bold}.btn.gold{background:var(--gold);color:#172536}.btn.light{background:#edf2f7;color:var(--navy)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.panel{margin-top:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.panel h3{margin:0}
+table{width:100%;border-collapse:collapse}th,td{text-align:right;padding:11px;border-bottom:1px solid var(--line);font-size:14px}th{color:var(--muted);font-weight:normal}
+.tag{background:#eef4f8;color:#245477;border-radius:20px;padding:3px 9px;font-size:12px}
+.hidden{display:none!important}.view{display:none}.view.active{display:block}
+.question{padding:18px 0;border-bottom:1px solid var(--line)}.question p{font-weight:bold;margin-top:0}.option{display:block;padding:9px 12px;margin:7px 0;border:1px solid var(--line);border-radius:10px;cursor:pointer}.option:has(input:checked){border-color:var(--gold);background:#fffaf0}
+input[type=text],input[type=password],select{padding:11px;border:1px solid var(--line);border-radius:10px;width:100%;font:inherit;background:#fff}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.notice{background:#fff8e8;border:1px solid #f0dfb8;padding:13px;border-radius:12px;color:#6c5425;font-size:13px}
+footer{background:#0d233d;color:#dce5ed;text-align:center;padding:22px;font-size:13px}
+@media(max-width:800px){.top{align-items:flex-start;flex-direction:column}.top nav{display:flex;flex-wrap:wrap;gap:7px;width:100%;margin-top:12px}.top nav button{font-size:12px;padding:8px 10px}.hero{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cards,.formgrid{grid-template-columns:1fr}.section-title{align-items:start;flex-direction:column}th,td{font-size:12px;padding:8px}.top nav button{flex:1 1 auto}}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <div class="brand"><div class="seal">⌖</div><div><strong>مديرية التربية والتعليم بالمنيا</strong><small>إدارة مطاي التعليمية · توجيه الدراسات الاجتماعية</small></div></div>
+  <nav><button onclick="showView('home')">الرئيسية</button><button onclick="showView('tests')">الاختبارات</button><button onclick="showView('resources')">المكتبة</button><button onclick="showView('teachers')">بيانات المعلمين</button><button onclick="showView('login')">دخول المعلم</button></nav>
+ </div>
+ <div class="hero">
+  <div><span class="pill">بوابة التطوير المهني للمعلمين</span><h1>معلم متميز، أداء أفضل، وتعليم متطور</h1><p>بيئة رقمية موحدة للاختبارات الإلكترونية والتدريب ومتابعة الأداء في تخصصي التاريخ والجغرافيا والمهارات التربوية.</p><button class="btn gold" onclick="showView('tests')">استكشف الاختبارات ←</button></div>
+  <div class="hero-card"><span>مساحة مهنية للتعلم والتقييم</span><b>الدراسات الاجتماعية</b><span>التاريخ · الجغرافيا · المهارات التربوية</span></div>
+ </div>
+</header>
+<main>
+ <section id="home" class="view active">
+  <div class="section-title"><div><h2>لوحة المنصة</h2><p>نظرة عامة على أقسام وخدمات المنصة</p></div><span class="tag">نسخة تجريبية للتصميم</span></div>
+  <div class="stats"><div class="stat"><span>المجالات الرئيسية</span><strong>03</strong></div><div class="stat"><span>أنواع الاختبارات</span><strong>02</strong></div><div class="stat"><span>التقارير</span><strong>متاحة</strong></div><div class="stat"><span>الوصول</span><strong>24/7</strong></div></div>
+  <div class="section-title"><div><h2>بوابات التخصص</h2><p>اختر المجال للانتقال إلى محتواه</p></div></div>
+  <div class="cards">
+   <article class="card"><div class="ico">🏛️</div><h3>التاريخ</h3><p>اختبارات معرفية ومهنية ومراجعات في فروع التاريخ.</p><button class="btn" onclick="showView('tests')">دخول القسم</button></article>
+   <article class="card"><div class="ico">🌍</div><h3>الجغرافيا</h3><p>اختبارات في الجغرافيا الطبيعية والبشرية والخرائط.</p><button class="btn" onclick="showView('tests')">دخول القسم</button></article>
+   <article class="card"><div class="ico">🎓</div><h3>المهارات التربوية</h3><p>التخطيط والتدريس والتقويم وإدارة الصف.</p><button class="btn" onclick="showView('tests')">دخول القسم</button></article>
+  </div>
+  <div class="panel"><div class="panel-head"><h3>خدمات المنصة</h3><span class="tag">للمعلم والموجه</span></div><div class="cards">
+   <div><b>📝 الاختبارات الإلكترونية</b><p>تقييمات تدريبية وتقييمية مع توقيت وتصحيح آلي للأسئلة الموضوعية.</p></div>
+   <div><b>📊 تقارير الأداء</b><p>ملخصات للنتائج ومؤشرات القوة والاحتياج التدريبي.</p></div>
+   <div><b>📚 المكتبة المهنية</b><p>مواد ومراجع ونشرات يضيفها فريق التوجيه.</p></div>
+  </div></div>
+ </section>
+ <section id="tests" class="view">
+  <div class="section-title"><div><h2>مركز الاختبارات</h2><p>اختر اختبارًا تجريبيًا للتعرف على آلية المنصة</p></div></div>
+  <div class="notice">تنبيه: الاختبار المعروض هنا نموذج تجريبي قصير، وليس اختبارًا رسميًا أو معتمدًا. لا تُستخدم نتيجته في أي قرار وظيفي.</div>
+  <div class="cards" style="margin-top:15px">
+   <article class="card"><span class="tag">تدريبي</span><h3>مبادئ في التاريخ</h3><p>5 أسئلة · اختيار من متعدد · دون توقيت رسمي</p><button class="btn" onclick="startQuiz('history')">ابدأ الاختبار</button></article>
+   <article class="card"><span class="tag">تدريبي</span><h3>مبادئ في الجغرافيا</h3><p>5 أسئلة · اختيار من متعدد · دون توقيت رسمي</p><button class="btn" onclick="startQuiz('geo')">ابدأ الاختبار</button></article>
+   <article class="card"><span class="tag">تدريبي</span><h3>مهارات تربوية</h3><p>5 أسئلة · اختيار من متعدد · دون توقيت رسمي</p><button class="btn" onclick="startQuiz('edu')">ابدأ الاختبار</button></article>
+  </div>
+  <div id="quizbox" class="panel hidden"><div class="panel-head"><h3 id="quiztitle">الاختبار</h3><span class="tag" id="progress">5 أسئلة</span></div><form id="quizform"><div id="questions"></div><button class="btn" type="submit">إنهاء الاختبار وعرض النتيجة</button></form><div id="result" class="hidden"></div></div>
+ </section>
+ <section id="resources" class="view">
+  <div class="section-title"><div><h2>المكتبة المهنية</h2><p>مساحة مقترحة للمواد التي يعتمدها فريق التوجيه</p></div></div>
+  <div class="cards"><article class="card"><div class="ico">📖</div><h3>مراجع التاريخ</h3><p>ملخصات ومصادر ومواد إثرائية.</p><span class="tag">بانتظار إضافة المحتوى المعتمد</span></article><article class="card"><div class="ico">🗺️</div><h3>مراجع الجغرافيا</h3><p>خرائط وبيانات ومواد تعليمية.</p><span class="tag">بانتظار إضافة المحتوى المعتمد</span></article><article class="card"><div class="ico">🧑‍🏫</div><h3>التطوير المهني</h3><p>أدلة التدريس والتقويم والتخطيط.</p><span class="tag">بانتظار إضافة المحتوى المعتمد</span></article></div>
+ </section>
+
+ <section id="teachers" class="view">
+  <div class="section-title"><div><h2>بيانات المعلمين</h2><p>سجل مهني منظم مع إمكانية إرفاق الصور ومستندات PDF</p></div><span class="tag">واجهة تجريبية</span></div>
+  <div class="notice">هذه شاشة عرض أولية. الملفات المختارة تظهر في قائمة المعاينة داخل الصفحة فقط؛ الحفظ الدائم والآمن يتطلب قاعدة بيانات ومساحة تخزين وخادمًا بصلاحيات دخول.</div>
+  <div class="panel">
+   <div class="panel-head"><h3>إضافة ملف معلم</h3><span class="tag">البيانات الأساسية</span></div>
+   <form id="teacherform">
+    <div class="formgrid">
+     <label>اسم المعلم بالكامل<input type="text" id="teachername" required placeholder="الاسم رباعي"></label>
+     <label>المدرسة<input type="text" id="teacherschool" placeholder="اسم المدرسة"></label>
+     <label>التخصص<select id="teacherspecialty"><option>تاريخ</option><option>جغرافيا</option><option>دراسات اجتماعية</option></select></label>
+     <label>المرحلة التعليمية<select id="teacherstage"><option>ابتدائي</option><option>إعدادي</option><option>ثانوي</option></select></label>
+     <label>الرقم الوظيفي (اختياري)<input type="text" id="teachercode" placeholder="الرقم الوظيفي"></label>
+     <label>وسيلة تواصل (اختياري)<input type="text" id="teachercontact" placeholder="هاتف أو بريد إلكتروني"></label>
+    </div>
+    <div style="margin-top:16px">
+     <label for="teacherfiles"><b>إرفاق ملف للمعلم</b></label>
+     <label for="teacherfiles" class="uploadbox" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;margin-top:9px;padding:22px 14px;border:2px dashed #c9a45c;border-radius:14px;background:#fff8e9;cursor:pointer;text-align:center"><span style="font-size:30px">📎</span><strong style="color:#173b60">اضغط هنا لإرفاق ملف</strong><span style="font-size:12px;color:#667789">PDF أو صورة JPG أو PNG — يمكن اختيار أكثر من ملف</span><span class="btn gold" style="display:inline-block;margin-top:5px">اختيار الملفات</span></label>
+     <input id="teacherfiles" type="file" accept="image/*,.pdf,application/pdf" multiple style="position:absolute;left:-9999px;width:1px;height:1px">
+     <p style="color:#667789;font-size:12px">يمكن اختيار أكثر من ملف. يُفضّل إرفاق المستندات اللازمة فقط، وعدم رفع بيانات شخصية غير مطلوبة.</p>
+     <div id="filepreview" style="font-size:13px;color:#36516b"></div>
+    </div>
+    <p><button class="btn" type="submit">إضافة إلى قائمة المعاينة</button></p>
+   </form>
+  </div>
+  <div class="panel">
+   <div class="panel-head"><h3>سجلات المعاينة</h3><span class="tag">تجريبية على هذا الجهاز/المتصفح</span></div>
+   <div style="overflow-x:auto"><table><thead><tr><th>اسم المعلم</th><th>المدرسة</th><th>التخصص</th><th>المرحلة</th><th>المرفقات</th></tr></thead><tbody id="teacherrows"><tr><td colspan="5" style="color:#667789">لم تتم إضافة سجلات بعد.</td></tr></tbody></table></div>
+  </div>
+ </section>
+
+ <section id="login" class="view">
+  <div class="section-title"><div><h2>دخول المعلم</h2><p>واجهة توضيحية لتصميم الحسابات</p></div></div>
+  <div class="panel" style="max-width:560px"><div class="notice">تسجيل الدخول الحقيقي يتطلب ربط الموقع بخادم آمن وقاعدة بيانات. لا تدخل بيانات شخصية حقيقية في هذه النسخة التجريبية.</div><div style="margin-top:15px" class="formgrid"><label>اسم المستخدم<input type="text" placeholder="اسم المستخدم التجريبي"></label><label>كلمة المرور<input type="password" placeholder="كلمة المرور"></label></div><p><button class="btn" onclick="alert('هذه واجهة تجريبية فقط. سيتم تفعيل الحسابات بعد إعداد الخادم وقاعدة البيانات.')">دخول تجريبي</button></p></div>
+ </section>
+</main>
+<footer>مديرية التربية والتعليم بالمنيا · إدارة مطاي التعليمية · توجيه الدراسات الاجتماعية</footer>
+<script>
+const banks={
+history:[['ما المقصود بالمصدر التاريخي؟',['دليل يُستفاد منه في دراسة الماضي','رأي معاصر فقط','توقع للمستقبل'],0],['أي مما يلي يُعد مصدرًا أوليًا؟',['كتاب مدرسي حديث','وثيقة معاصرة للحدث','مقال تلخيصي لاحق'],1],['ما أهمية التسلسل الزمني؟',['إلغاء أسباب الأحداث','ترتيب الأحداث وفهم تعاقبها','توحيد آراء المؤرخين'],1],['ما المهارة الأساسية عند تحليل وثيقة؟',['تحديد سياقها ومصدرها','حفظ عنوانها فقط','تجاهل زمنها'],0],['لماذا نقارن بين الروايات التاريخية؟',['للوصول إلى فهم نقدي أدق','لإلغاء كل المصادر','لزيادة عدد التواريخ'],0]],
+geo:[['ما الأداة الأنسب لتحديد المواقع والاتجاهات على سطح الأرض؟',['الخريطة','الخط الزمني','الوثيقة النصية'],0],['ماذا تمثل خطوط الطول؟',['دوائر موازية لخط الاستواء','أنصاف دوائر تصل بين القطبين','حدود الدول السياسية'],1],['ما المقصود بالكثافة السكانية؟',['عدد السكان بالنسبة إلى مساحة معينة','عدد المدن في الدولة','معدل الأمطار السنوي'],0],['أي العوامل يؤثر في المناخ؟',['خط العرض والارتفاع','نوع العملة','حدود المحافظات فقط'],0],['ما فائدة مقياس الرسم؟',['معرفة العلاقة بين المسافة على الخريطة والحقيقة','تحديد عمر الخريطة','قياس درجة الحرارة'],0]],
+edu:[['ما العنصر الذي يحدد ما يتوقع أن يتعلمه الطالب؟',['الهدف التعليمي','الواجب المنزلي','ترتيب المقاعد'],0],['أي تقويم يحدث أثناء عملية التعلم؟',['التقويم التكويني','التقويم الختامي فقط','لا يوجد تقويم'],0],['ما أفضل بداية للتخطيط لدرس؟',['تحديد نواتج التعلم','اختيار لون السبورة','كتابة الواجب أولًا'],0],['متى يكون التعزيز فعالًا؟',['عندما يكون مناسبًا للسلوك وقريبًا منه','عندما يكون عشوائيًا','عندما يتجاهل الفروق الفردية'],0],['ما المقصود بالتعلم النشط؟',['مشاركة المتعلم في بناء تعلمه','استماع المتعلم دون تفاعل دائمًا','إلغاء دور المعلم'],0]]
+};
+let current=[];
+
+const teacherFiles=document.getElementById('teacherfiles');
+teacherFiles.addEventListener('change',()=>{
+ const files=[...teacherFiles.files];
+ const allowed=files.every(f=>f.type==='application/pdf'||f.type.startsWith('image/'));
+ const maxSize=10*1024*1024;
+ const withinLimit=files.every(f=>f.size<=maxSize);
+ const preview=document.getElementById('filepreview');
+ if(!allowed){teacherFiles.value='';preview.textContent='نوع ملف غير مدعوم. اختر PDF أو صورة.';return;}
+ if(!withinLimit){teacherFiles.value='';preview.textContent='حجم الملف يتجاوز 10 ميجابايت. اختر ملفًا أصغر.';return;}
+ preview.innerHTML=files.length
+ ? '<b>الملفات الجاهزة للإرفاق:</b><ul>'+files.map(f=>`<li>${f.name} — ${(f.size/1024).toFixed(0)} KB</li>`).join('')+'</ul>'
+ : '';
+});
+document.getElementById('teacherform').addEventListener('submit',e=>{
+ e.preventDefault();
+ const name=document.getElementById('teachername').value.trim();
+ const school=document.getElementById('teacherschool').value.trim()||'—';
+ const specialty=document.getElementById('teacherspecialty').value;
+ const stage=document.getElementById('teacherstage').value;
+ const count=teacherFiles.files.length;
+ const tbody=document.getElementById('teacherrows');
+ if(tbody.querySelector('td[colspan]')) tbody.innerHTML='';
+ const tr=document.createElement('tr');
+ [name,school,specialty,stage,count+' ملف'].forEach(value=>{
+  const td=document.createElement('td');td.textContent=value;tr.appendChild(td);
+ });
+ tbody.appendChild(tr);
+ e.target.reset();document.getElementById('filepreview').innerHTML='';
+ alert('أُضيف السجل إلى قائمة المعاينة فقط. لم تُرفع الملفات إلى خادم أو تُحفظ بشكل دائم.');
+});
+
+function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function startQuiz(type){current=banks[type];const names={history:'اختبار تدريبي: مبادئ في التاريخ',geo:'اختبار تدريبي: مبادئ في الجغرافيا',edu:'اختبار تدريبي: مهارات تربوية'};document.getElementById('quiztitle').textContent=names[type];document.getElementById('progress').textContent=current.length+' أسئلة';document.getElementById('result').classList.add('hidden');document.getElementById('quizform').classList.remove('hidden');document.getElementById('questions').innerHTML=current.map((q,i)=>`<div class="question"><p>${i+1}. ${q[0]}</p>${q[1].map((a,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}" required> ${a}</label>`).join('')}</div>`).join('');document.getElementById('quizbox').classList.remove('hidden');document.getElementById('quizbox').scrollIntoView({behavior:'smooth'})}
+document.getElementById('quizform').addEventListener('submit',e=>{e.preventDefault();let score=0;current.forEach((q,i)=>{if(Number(new FormData(e.target).get('q'+i))===q[2])score++});document.getElementById('quizform').classList.add('hidden');const r=document.getElementById('result');r.classList.remove('hidden');r.innerHTML=`<h3>انتهى الاختبار التجريبي</h3><p style="font-size:25px;color:#173b60;font-weight:bold">${score} من ${current.length}</p><p>${score===current.length?'أحسنت! إجاباتك كلها صحيحة.': 'يمكنك مراجعة الموضوعات والتدرب مرة أخرى.'}</p><button class="btn light" onclick="showView('tests');document.getElementById('quizbox').classList.add('hidden')">العودة للاختبارات</button>`;});
+</script>
+</body></html>
