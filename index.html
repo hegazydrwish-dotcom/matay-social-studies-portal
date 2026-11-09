@@ -154,35 +154,43 @@ function startQuiz(type){current=banks[type];const names={history:'اختبار 
 document.getElementById('quizform').addEventListener('submit',e=>{e.preventDefault();let score=0;current.forEach((q,i)=>{if(Number(new FormData(e.target).get('q'+i))===q[2])score++});document.getElementById('quizform').classList.add('hidden');const r=document.getElementById('result');r.classList.remove('hidden');r.innerHTML=`<h3>انتهى الاختبار التجريبي</h3><p style="font-size:25px;color:#173b60;font-weight:bold">${score} من ${current.length}</p><p>${score===current.length?'أحسنت! إجاباتك كلها صحيحة.': 'يمكنك مراجعة الموضوعات والتدرب مرة أخرى.'}</p><button class="btn light" onclick="showView('tests');document.getElementById('quizbox').classList.add('hidden')">العودة للاختبارات</button>`;});
 </script>
  
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
-const matayDB = window.supabase.createClient(
-  'https://luyafrjejevtehmktyzte.supabase.co',
-  'sb_publishable_8G6eXoBYpVHGoRNH5FWZNQ_aa13y4-d'
-);
-
-async function testMatayConnection() {
-  const { data, error } = await matayDB
-    .from('educational_stages')
-    .select('*')
-    .limit(1);
-
+(async function () {
   const msg = document.createElement('div');
   msg.style.cssText =
     'position:fixed;bottom:15px;left:15px;z-index:99999;' +
     'background:#102a49;color:white;padding:14px;' +
     'border-radius:10px;direction:rtl';
 
-  msg.textContent = error
-    ? 'تعذر تحميل المراحل التعليمية'
-    : 'تم الاتصال بقاعدة البيانات بنجاح ✓';
-
+  msg.textContent = 'جاري الاتصال بقاعدة البيانات...';
   document.body.appendChild(msg);
-  if (error) console.error(error);
-  else console.log('Supabase connected:', data);
-}
 
-testMatayConnection();
+  try {
+    if (!window.supabase) {
+      throw new Error('Supabase library not loaded');
+    }
+
+    const db = window.supabase.createClient(
+      'https://luyafrjejevtehmktyzte.supabase.co',
+      'sb_publishable_8G6eXoBYpVHGoRNH5FWZNQ_aa13y4-d'
+    );
+
+    const { error } = await db
+      .from('educational_stages')
+      .select('id')
+      .limit(1);
+
+    if (error) throw error;
+
+    msg.textContent = 'تم الاتصال بقاعدة البيانات بنجاح ✓';
+  } catch (error) {
+    console.error('Matay connection error:', error);
+    msg.textContent = 'خطأ في الاتصال: ' + error.message;
+  }
+})();
 </script>
-
+</escape>
 </body></html>
