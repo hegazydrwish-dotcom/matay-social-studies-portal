@@ -153,4 +153,36 @@ function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.
 function startQuiz(type){current=banks[type];const names={history:'اختبار تدريبي: مبادئ في التاريخ',geo:'اختبار تدريبي: مبادئ في الجغرافيا',edu:'اختبار تدريبي: مهارات تربوية'};document.getElementById('quiztitle').textContent=names[type];document.getElementById('progress').textContent=current.length+' أسئلة';document.getElementById('result').classList.add('hidden');document.getElementById('quizform').classList.remove('hidden');document.getElementById('questions').innerHTML=current.map((q,i)=>`<div class="question"><p>${i+1}. ${q[0]}</p>${q[1].map((a,j)=>`<label class="option"><input type="radio" name="q${i}" value="${j}" required> ${a}</label>`).join('')}</div>`).join('');document.getElementById('quizbox').classList.remove('hidden');document.getElementById('quizbox').scrollIntoView({behavior:'smooth'})}
 document.getElementById('quizform').addEventListener('submit',e=>{e.preventDefault();let score=0;current.forEach((q,i)=>{if(Number(new FormData(e.target).get('q'+i))===q[2])score++});document.getElementById('quizform').classList.add('hidden');const r=document.getElementById('result');r.classList.remove('hidden');r.innerHTML=`<h3>انتهى الاختبار التجريبي</h3><p style="font-size:25px;color:#173b60;font-weight:bold">${score} من ${current.length}</p><p>${score===current.length?'أحسنت! إجاباتك كلها صحيحة.': 'يمكنك مراجعة الموضوعات والتدرب مرة أخرى.'}</p><button class="btn light" onclick="showView('tests');document.getElementById('quizbox').classList.add('hidden')">العودة للاختبارات</button>`;});
 </script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const matayDB = window.supabase.createClient(
+  'https://luyafrjejevtehmktyzte.supabase.co',
+  'sb_publishable_8G6eXoBYpVHGoRNH5FWZNQ_aa13y4-d'
+);
+
+async function testMatayConnection() {
+  const { data, error } = await matayDB
+    .from('educational_stages')
+    .select('*')
+    .limit(1);
+
+  const msg = document.createElement('div');
+  msg.style.cssText =
+    'position:fixed;bottom:15px;left:15px;z-index:99999;' +
+    'background:#102a49;color:white;padding:14px;' +
+    'border-radius:10px;direction:rtl';
+
+  msg.textContent = error
+    ? 'تعذر تحميل المراحل التعليمية'
+    : 'تم الاتصال بقاعدة البيانات بنجاح ✓';
+
+  document.body.appendChild(msg);
+  if (error) console.error(error);
+  else console.log('Supabase connected:', data);
+}
+
+testMatayConnection();
+</script>
+
 </body></html>
